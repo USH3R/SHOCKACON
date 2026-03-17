@@ -14,7 +14,7 @@ SHOCKACON – AI-powered system detecting deceptive content targeting citizens a
 ---
 
 ## 🛡️ Project Overview
-**SHOCKACON** (Secure Hazard Observation & Cyber Knowledge for AI CONtrol) is a defensive framework designed to neutralize deceptive AI-generated content. It identifies misinformation, deepfake scams, and adversarial influence campaigns in real-time, and other.
+**SHOCKACON** (Secure Hazard Observation & Cyber Knowledge for AI CONtrol) is a defensive framework designed to detect and neutralize deceptive AI-generated content. It identifies misinformation, deepfake scams, and adversarial influence campaigns in real-time, and other.
 
 ### 🧠 The SHOCKACON Engine
 * **Python (The Sentinel):** Machine learning models that perform sentiment and linguistic analysis to flag "Shock-Value" disinformation.
