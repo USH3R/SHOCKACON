@@ -1,8 +1,3 @@
-# SHOCKACON
-SHOCKACON – AI-powered system detecting deceptive content targeting citizens and federal systems. Using machine learning and real-time analysis, it identifies scams, misinformation, and malicious AI campaigns to protect digital trust and empower secure online environments.
-
-# ⚡ SHOCKACON: AI-Powered Cognitive Defense System
-
 ![iSAFE 2026](https://img.shields.io/badge/Hackathon-iSAFE_2026-blueviolet?style=for-the-badge)
 ![Security](https://img.shields.io/badge/Sector-Federal_&_Civic_Defense-red?style=for-the-badge)
 ![NIST](https://img.shields.io/badge/NIST-SP_800--161-blue?style=for-the-badge)
@@ -11,6 +6,10 @@ SHOCKACON – AI-powered system detecting deceptive content targeting citizens a
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+# SHOCKACON
+SHOCKACON – AI-powered system detecting deceptive content targeting citizens and federal systems. Using machine learning and real-time analysis, it identifies scams, misinformation, and malicious AI campaigns to protect digital trust and empower secure online environments.
+
+# ⚡ SHOCKACON: AI-Powered Cognitive Defense System
 
 ---
 
