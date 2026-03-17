@@ -31,3 +31,8 @@ $$\Delta = \frac{\sum (V_w \times A_s)}{\text{Source\_Trust}}$$
 Where $V_w$ is the volatility weight and $A_s$ is the anomaly score of the media metadata.
 
 ---
+
+## 🏃‍♂️ Run the SHOCKACON Demo
+Just open a terminal in the repo and type:
+```bash
+./demo.sh
