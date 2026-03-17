@@ -1,3 +1,7 @@
+# 🏆 Hackathon Project: SHOCKACON
+> **Submission for:** [Global iSAFE Hackathon 2026](https://www.cyberpeace.org/isafe-hackathon) 
+> **Status:** Registered / Active Development / Cognitive Defense Framework
+
 ![iSAFE 2026](https://img.shields.io/badge/Hackathon-iSAFE_2026-blueviolet?style=for-the-badge)
 ![Security](https://img.shields.io/badge/Sector-Federal_&_Civic_Defense-red?style=for-the-badge)
 ![NIST](https://img.shields.io/badge/NIST-SP_800--161-blue?style=for-the-badge)
