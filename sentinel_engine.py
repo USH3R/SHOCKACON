@@ -1,6 +1,6 @@
 import time
 
-# Try to import TextBlob. If unavailable, simulate sentiment
+# Attempt to import TextBlob; fallback if missing
 try:
     from textblob import TextBlob
     TEXTBLOB_AVAILABLE = True
@@ -13,17 +13,16 @@ class ShockSentinel:
         print("[INIT] SHOCKACON Sentinel Active. Monitoring for cognitive threats...")
 
     def calculate_urgency(self, content):
-        """
-        Returns a normalized score between 0 and 1.
-        Uses TextBlob if installed; otherwise, uses a simple heuristic.
-        """
         if TEXTBLOB_AVAILABLE:
             blob = TextBlob(content)
             polarity = blob.sentiment.polarity
             urgency_score = min(max((abs(polarity) + 0.5), 0), 1)
         else:
-            # Simple heuristic if TextBlob is not installed
-            urgency_score = 0.6 if any(word in content.upper() for word in ["URGENT", "CRITICAL", "ALERT"]) else 0.3
+            # Simple fallback: count exclamation marks & uppercase words
+            urgency_score = 0.5
+            urgency_score += content.count('!') * 0.05
+            urgency_score += sum(1 for word in content.split() if word.isupper()) * 0.05
+            urgency_score = min(urgency_score, 1.0)
         return urgency_score
 
     def scan_content(self, content_body, metadata):
@@ -34,7 +33,6 @@ class ShockSentinel:
 
         urgency_score = self.calculate_urgency(content_body)
         provenance_score = 1.0 if provenance_valid else 0.0
-
         deception_index = (urgency_score * 0.6) + ((1 - provenance_score) * 0.4)
 
         if deception_index > self.deception_threshold:
@@ -55,6 +53,7 @@ class ShockSentinel:
 
 if __name__ == "__main__":
     sentinel = ShockSentinel()
+
     test_cases = [
         {
             "content": "CRITICAL: YOUR SOCIAL SECURITY NUMBER HAS BEEN SUSPENDED. CALL IMMEDIATELY.",
@@ -69,6 +68,14 @@ if __name__ == "__main__":
             "metadata": {"source_id": "UNKNOWN-ALERT", "is_verified": False}
         }
     ]
+
+    for case in test_cases:
+        result = sentinel.scan_content(case["content"], case["metadata"])
+        print(f"\n[RESULT] Source: {case['metadata']['source_id']}")
+        print(f"Deception Index: {result['index']}")
+        print(f"Threat Level: {result['threat_level']}")
+        print(f"Action: {result['action']}")
+        time.sleep(0.5)
 
     for case in test_cases:
         result = sentinel.scan_content(case["content"], case["metadata"])
