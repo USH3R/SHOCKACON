@@ -31,7 +31,3 @@ $$\Delta = \frac{\sum (V_w \times A_s)}{\text{Source\_Trust}}$$
 Where $V_w$ is the volatility weight and $A_s$ is the anomaly score of the media metadata.
 
 ---
-
-## 🚦 Status
-* **Repo Initialized:** [March 17, 2026]
-* **Drafting Core Logic:** [PENDING GREEN LIGHT]
