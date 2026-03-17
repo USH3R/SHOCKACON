@@ -2,43 +2,17 @@
 
 echo "=== SHOCKACON Demo Start ==="
 
-# -----------------------------
-# Step 1: Python Sentinel Engine
-# -----------------------------
+# Step 1: Python
 echo "[PYTHON] Running Sentinel Engine..."
+python3 sentinel_engine.py || echo "[WARN] Python step failed, continuing demo..."
 
-# Optional: Install dependencies only if not already installed
-# This uses inline fallback: if textblob is missing, it will warn but continue
-python3 - << 'EOF'
-try:
-    import textblob
-except ModuleNotFoundError:
-    print("[WARN] textblob not installed. Using fallback scoring.")
-
-# Run the main Sentinel Engine
-python3 sentinel_engine.py || { echo "[ERROR] Python Sentinel failed."; exit 1; }
-EOF
-
-# -----------------------------
-# Step 2: Java Digital Mentor
-# -----------------------------
+# Step 2: Java
 echo "[JAVA] Running Digital Mentor..."
-# Compile only if class file doesn't exist
-if [ ! -f DigitalMentor.class ]; then
-    javac DigitalMentor.java || { echo "[ERROR] Java compilation failed."; exit 1; }
-fi
-# Run the Java program
-java DigitalMentor || { echo "[ERROR] Could not run Digital Mentor."; exit 1; }
+javac DigitalMentor.java && java DigitalMentor || echo "[WARN] Java step failed, continuing demo..."
 
-# -----------------------------
-# Step 3: C++ Enclave Guard
-# -----------------------------
+# Step 3: C++
 echo "[C++] Running Enclave Guard..."
-# Compile only if binary doesn't exist
-if [ ! -f enclave_guard ]; then
-    g++ enclaveguard.cpp -o enclave_guard || { echo "[ERROR] C++ compilation failed."; exit 1; }
-fi
-# Run the C++ binary
-./enclave_guard || { echo "[ERROR] Could not run Enclave Guard."; exit 1; }
+g++ -o enclave_guard enclave_guard.cpp
+./enclave_guard || echo "[WARN] C++ step failed, continuing demo..."
 
 echo "=== SHOCKACON Demo Complete ==="
