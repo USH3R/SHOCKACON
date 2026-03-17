@@ -39,3 +39,12 @@ public class DigitalMentor {
         generateUserGuidance("LOW", 0.32);
     }
 }
+    }
+
+    public static void main(String[] args) {
+        // Simulating a hand-off from the Python Sentinel
+        generateUserGuidance("HIGH", 0.88);
+        generateUserGuidance("MEDIUM", 0.62);
+        generateUserGuidance("LOW", 0.32);
+    }
+}
