@@ -33,6 +33,17 @@ Where $V_w$ is the volatility weight and $A_s$ is the anomaly score of the media
 ---
 
 ## 🏃‍♂️ Run the SHOCKACON Demo
-1. Open a terminal.
-2. Type: bash demo.sh
-3. Watch the Python, Java, and C++ components run automatically.
+
+1. Open Codespace (Github) or any terminal and type this:
+         
+         bash demo.sh
+         
+2. Or try the manual executable way (optional):
+   Open Codespace (Github) or any terminal and type this:
+         
+         chmod +x demo.sh
+         
+   Press enter.
+   Then type:
+         
+         ./demo.sh
