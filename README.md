@@ -34,16 +34,35 @@ Where $V_w$ is the volatility weight and $A_s$ is the anomaly score of the media
 
 ## 🏃‍♂️ Run the SHOCKACON Demo
 
-1. Open Codespace (Github) or any terminal and type this:
-         
-         bash demo.sh
-         
-2. Or try the manual executable way (optional):
-   Open Codespace (Github) or any terminal and type this:
-         
-         chmod +x demo.sh
-         
-   Press enter.
-   Then type:
-         
-         ./demo.sh
+  1. Run in GitHub Codespaces (Recommended)  
+    Open this repository on GitHub.  
+    Click Code → Codespaces → Create Codespace on main.  
+    Wait for the environment to load.  
+    Open the terminal inside Codespaces.  
+    Run:         bash demo.sh    
+  
+  2. Run Manually Inside the Repository (Local Machine)  
+  If you downloaded or cloned the repository:  
+  Open a terminal.  
+  Navigate to the project folder.  
+  Example:                            cd Hackathon-Project-SHOCKACON-Global-iSAFE-Hackathon  
+  Run the launcher:                   bash demo.sh  
+    
+  3. If You Are Using a Random Public Terminal  
+  Public terminals do not automatically have this project. You must first download or clone the repository.  
+  A. Option A — Clone with Git  
+  Type:  
+            git clone https://github.com/USH3R/Hackathon-Project-SHOCKACON-Global-iSAFE-Hackathon.git  
+            cd Hackathon-Project-SHOCKACON-Global-iSAFE-Hackathon  
+            bash demo.sh  
+   B. Option B — Download ZIP  
+   Click Code → Download ZIP on GitHub.  
+   Extract the folder from the ZIP file. Then,  
+   Open a terminal in that folder. Run / Type:         bash demo.sh  
+  
+   4. Quick Start Command  
+   This command is only for use inside a Terminal (like the one in Codespaces, terminal, or on your local machine).  
+   Verify Your Location: Ensure your terminal is currently pointed at the project directory;  
+   You should see Hackathon-Project-SHOCKACON-Global-iSAFE-Hackathon in your command prompt.  
+   If you have already performed the setup in steps 1, 2, or 3 and just need to restart the application, type:  
+            bash demo.sh  
